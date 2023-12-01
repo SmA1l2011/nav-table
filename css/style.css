@@ -116,7 +116,7 @@ h2 {
 .menu:hover>ul {
     display: block;
     position: absolute;
-    right: calc(100% + 5px);
+    right: calc(-100% + -5px);
     top: 0;
 }
 
