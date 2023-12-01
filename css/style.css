@@ -1,0 +1,341 @@
+body {
+    margin: 0;
+}
+
+.wrapper {
+    padding: 53px 0 96px 0;
+    max-width: 960px;
+    margin: auto;
+}
+
+h2 {
+    font: bold 24px "Arial";
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #bfbfbf;
+}
+
+.nav-flex li ul {
+    display: none;
+}
+
+.nav-flex {
+    background-color: #2a3644;
+    border-radius: 3px;
+    margin-bottom: 40px;
+}
+
+.nav-flex ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-flex a:hover {
+    color: #fd8612;
+    background: #3f4852;
+}
+
+.nav-flex>ul>li:hover>ul {
+    display: block;
+    position: absolute;
+    top: calc(100% + 5px);
+    z-index: 1;
+}
+
+.nav-flex ul li {
+    position: relative;
+}
+
+.nav-flex>ul>li:before {
+    content: '';
+    position: absolute;
+    background: transparent;
+    width: 100%;
+    height: 5px;
+    bottom: -10%;
+}
+
+.nav-flex ul li a {
+    font: bold 16px "Arial";
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 13px;
+    background-color: #2a3644;
+    border-right: 1px solid #3f4852;
+    border-left: 1px solid #3f4852;
+    transition: all 0.3s ease;
+}
+
+.nav .nav-flex ul li ul a {
+    font: bold 15px "Arial";
+    width: 210px;
+    padding: 12px;
+    color: #2a3644;
+    background-color: #d2d4d5;
+    border-radius: 0;
+    border-left: unset;
+    border-right: unset;
+    border-bottom: 1px solid #b9bdc1;
+}
+
+.nav-flex ul li ul li:nth-child(1) a,
+.nav-flex .menu .menu-two li:nth-child(1) a {
+    border-radius: 3px 3px 0 0;
+}
+
+.nav-flex ul li ul li:last-child a,
+.nav-flex .menu .menu-two li:last-child a {
+    border-radius: 0 0 3px 3px;
+    border-bottom: 2px solid #2a3644;
+}
+
+.nav-flex ul li:nth-child(1) a {
+    border-radius: 3px 0 0 3px;
+    border-left: solid 1px transparent;
+}
+
+.nav-flex ul li:nth-child(4) a,
+.nav-flex ul li:nth-child(5) a {
+    border-radius: 0 3px 3px 0;
+    border-right: solid 1px transparent;
+}
+
+.nav-flex ul li:nth-child(4) ul {
+    right: 0;
+}
+
+.nav-flex ul li ul a:hover {
+    color: #fd8612;
+    background: #3f4852;
+}
+
+.menu:hover>ul {
+    display: block;
+    position: absolute;
+    right: calc(100% + 5px);
+    top: 0;
+}
+
+.menu::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 20px;
+    background: transparent;
+    right: -7%;
+}
+
+.menu .menu-two:hover>ul {
+    display: block;
+    position: absolute;
+    right: calc(100% + 5px);
+    top: 0;
+}
+
+.menu-two::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 20px;
+    background: transparent;
+    left: -7%;
+}
+
+.nav-flex .menu .menu-two li a {
+    border-radius: unset;
+    border-bottom: unset;
+}
+
+.nav-flex .menu .menu-two li a {
+    border-bottom: 1px solid #b9bdc1;
+}
+
+.nav-flex .haeder-button a {
+    padding-left: 30px;
+    position: relative;
+}
+
+.nav-flex .haeder-button a::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 13px;
+    background: -39px 0 url(../img/sprite.png);
+    left: 8%;
+    bottom: 38%;
+    transition: all 0.3s ease;
+}
+
+.nav-flex .haeder-button a:hover::before {
+    background: -39px -13px url(../img/sprite.png);
+}
+
+.nav-flex .social {
+    margin-left: 226px;
+}
+
+.nav-flex .social {
+    align-items: center;
+    width: 91px;
+    padding-right: 30px;
+}
+
+.nav-flex .social a:hover {
+    border-radius: 3px;
+}
+
+.nav-flex .social .fb {
+    position: relative;
+    border-right: unset;
+    border-left: unset;
+}
+
+.fb::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 18px;
+    background: url(../img/sprite.png);
+    top: 15%;
+    left: 35%;
+    transition: all 0.3s ease;
+}
+
+.fb:hover::before {
+    background: 0 -18px url(../img/sprite.png);
+}
+
+.nav-flex .social .tw,
+.nav-flex .social .inst {
+    position: relative;
+    border-right: unset;
+    border-left: unset;
+}
+
+.tw::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 14px;
+    background: -9px 0 url(../img/sprite.png);
+    top: 23%;
+    left: 25%;
+    transition: all 0.3s ease;
+}
+
+.tw:hover::before {
+    background: -8px -14px url(../img/sprite.png);
+}
+
+.inst::before {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 16px;
+    background: -25px 0 url(../img/sprite.png);
+    top: 19%;
+    left: 25%;
+    transition: all 0.3s ease;
+}
+
+.inst:hover::before {
+    background: -25px -16px url(../img/sprite.png);
+}
+
+.nav-flex .menu-four:hover>ul {
+    display: block;
+    position: absolute;
+    right: -100%;
+    top: -200%;
+}
+
+table td,
+.table-css p:first-child span {
+    border: solid 1px #3f4852;
+}
+
+table thead td {
+    padding: 12.75px 48.75px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.table thead,
+.table-css p:first-child {
+    background: #2a3644;
+    text-align: center;
+    font: bold 16px "Arial";
+    color: #ffffff;
+}
+
+.td {
+    padding: 10px 451px 10px 25px;
+}
+
+.td-two {
+    padding: 21px;
+}
+
+.tr td {
+    max-width: 130px;
+    padding: 12.75px 47px;
+}
+
+tbody td,
+.table-css span {
+    padding: 12.75px 48.75px;
+    text-align: center;
+    border: solid 1px #c0c1c2;
+}
+
+tbody tr,
+.table-css p {
+    background: #f2f2f2;
+    font: 16px "Arial";
+    color: #2a3644;
+}
+
+tbody tr:nth-child(2n),
+.table-css p:nth-child(2n) {
+    background: #e8e8e8;
+}
+
+tbody td:first-child {
+    padding: 0;
+}
+
+tbody td:nth-child(2),
+.table-css p span:nth-child(2) {
+    text-align: left;
+    padding: 10px 25px;
+}
+
+.table-css {
+    display: table;
+}
+
+.table-css p {
+    display: table-row;
+}
+
+.table-css span {
+    display: table-cell;
+}
+
+.table-css p:first-child span:nth-child(2) {
+    padding: 15px 375px 15px 25px;
+}
+
+.table-css p span:first-child {
+    padding: 15px;
+}
+
+.css-table h2 {
+    margin: 50px 0 20px 0;
+}
