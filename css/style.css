@@ -306,6 +306,16 @@ tbody tr:nth-child(2n),
     background: #e8e8e8;
 }
 
+tbody tr,
+.table-css p:not(:first-child) {
+    transition: all 0.3s ease;
+}
+
+tbody tr:hover,
+.table-css p:not(:first-child):hover {
+    background: #c0c1c2;
+}
+
 tbody td:first-child {
     padding: 0;
 }
