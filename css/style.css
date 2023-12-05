@@ -154,12 +154,12 @@ h2 {
     border-bottom: 1px solid #b9bdc1;
 }
 
-.nav-flex .haeder-button a {
+.nav-flex .button a {
     padding-left: 30px;
     position: relative;
 }
 
-.nav-flex .haeder-button a::before {
+.nav-flex .button a::before {
     content: '';
     position: absolute;
     width: 16px;
@@ -170,7 +170,7 @@ h2 {
     transition: all 0.3s ease;
 }
 
-.nav-flex .haeder-button a:hover::before {
+.nav-flex .button a:hover::before {
     background: -39px -13px url(../img/sprite.png);
 }
 
