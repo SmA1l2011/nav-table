@@ -45,6 +45,32 @@ h2 {
     z-index: 1;
 }
 
+.wrapper .menu-four:hover ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 175px;
+    width: max-content;
+    background: #d2d4d5;
+    border-radius: 3px;
+}
+
+.wrapper .menu-four ul li:last-child a {
+    border-radius: unset;
+}
+
+.wrapper .menu-four ul li:nth-child(4) a {
+    border-radius: 0 0 0 3px;
+}
+
+.wrapper .menu-four ul li:nth-child(5) a {
+    border-radius: 0 3px 0 0;
+}
+
+.wrapper .menu-four li:not(:nth-child(5),:last-child) {
+    border-right: 1px solid #b9bdc1;
+}
+
 .nav-flex ul li {
     position: relative;
 }
@@ -90,7 +116,6 @@ h2 {
 .nav-flex ul li ul li:last-child a,
 .nav-flex .menu .menu-two li:last-child a {
     border-radius: 0 0 3px 3px;
-    border-bottom: 2px solid #2a3644;
 }
 
 .nav-flex ul li:nth-child(1) a {
@@ -246,12 +271,6 @@ h2 {
     background: -25px -16px url(../img/sprite.png);
 }
 
-.nav-flex .menu-four:hover>ul {
-    display: block;
-    position: absolute;
-    right: -100%;
-    top: -200%;
-}
 
 table td,
 .table-css p:first-child span {
@@ -287,11 +306,22 @@ table {
     padding: 12.75px 47px;
 }
 
-tbody td,
-.table-css span {
+tbody td:not(:nth-child(3),:nth-child(4),:last-child),
+.tbody-css span:not(:nth-child(3),:nth-child(4),:last-child) {
     padding: 12.75px 48.75px;
     text-align: center;
     border: solid 1px #c0c1c2;
+}
+
+tbody td:not(:nth-child(1),:nth-child(2)),
+.tbody-css span:not(:nth-child(1),:nth-child(2)) {
+    padding: 12.75px 20px;
+    text-align: right;
+    border: solid 1px #c0c1c2;
+}
+
+.tbody-css:first-child span:not(:first-child,:nth-child(2)) {
+    padding: 10px 47.5px;
 }
 
 tbody tr,
@@ -339,11 +369,11 @@ tbody td:nth-child(2),
 }
 
 .table-css p:first-child span:nth-child(2) {
-    padding: 15px 375px 15px 25px;
+    padding: 12.3px 375px 12.3px 25px;
 }
 
 .table-css p span:first-child {
-    padding: 15px;
+    padding: 10px 20px;
 }
 
 .css-table h2 {
