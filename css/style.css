@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
 }
@@ -27,10 +31,14 @@ h2 {
 
 .nav-flex ul {
     display: flex;
-    justify-content: space-between;
     list-style: none;
     padding: 0;
     margin: 0;
+}
+
+.jc-flex ul {
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav-flex a:hover {
@@ -75,6 +83,10 @@ h2 {
     position: relative;
 }
 
+.flex-grow ul li {
+    flex-grow: 1;
+}
+
 .nav-flex>ul>li:before {
     content: '';
     position: absolute;
@@ -82,6 +94,15 @@ h2 {
     width: 100%;
     height: 5px;
     bottom: -10%;
+}
+
+.flex-grow ul li a {
+    text-align: center;
+    width: 100%;
+}
+
+.nav-flex li ul li a {
+    text-align: left;
 }
 
 .nav-flex ul li a {
