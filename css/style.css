@@ -117,6 +117,10 @@ h2 {
     transition: all 0.3s ease;
 }
 
+.jc-flex ul li a {
+    padding: 13px 29px;
+}
+
 .nav .nav-flex ul li ul a {
     font: bold 15px "Arial";
     width: 210px;
@@ -150,7 +154,7 @@ h2 {
     border-right: solid 1px transparent;
 }
 
-.nav-flex ul li:nth-child(4) ul {
+.nav-flex ul li:nth-child(4):not(.menu-three) ul {
     right: 0;
 }
 
@@ -211,7 +215,7 @@ h2 {
     width: 16px;
     height: 13px;
     background: -39px 0 url(../img/sprite.png);
-    left: 8%;
+    left: 16%;
     bottom: 38%;
     transition: all 0.3s ease;
 }
@@ -300,6 +304,34 @@ table td,
 
 table thead td {
     padding: 12.75px 48.75px;
+}
+
+thead tr:first-child td,
+.wrapper .tbody-css:first-child span {
+    border-top: transparent;
+}
+
+thead td:first-child {
+    border-left: transparent;
+}
+
+thead td:last-child {
+    border-right: transparent;
+}
+
+.wrapper tbody td:first-child,
+.wrapper .tbody-css span:first-child {
+    border-left: transparent;
+}
+
+.wrapper tbody tr:last-child td,
+.wrapper .tbody-css:last-child span {
+    border-bottom: transparent;
+}
+
+.wrapper tbody td:last-child,
+.wrapper .tbody-css span:last-child {
+    border-right: transparent;
 }
 
 table {
