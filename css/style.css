@@ -7,7 +7,7 @@ body {
 }
 
 .wrapper {
-    padding: 53px 0 96px 0;
+    padding: 33px 0 96px 0;
     max-width: 960px;
     margin: auto;
 }
@@ -41,7 +41,7 @@ h2 {
     justify-content: space-between;
 }
 
-.nav-flex a:hover {
+.wrapper .nav-flex a:hover {
     color: #fd8612;
     background: #3f4852;
 }
@@ -87,6 +87,10 @@ h2 {
     flex-grow: 1;
 }
 
+.flex-grow:last-child {
+    display: flex;
+}
+
 .nav-flex>ul>li:before {
     content: '';
     position: absolute;
@@ -105,7 +109,7 @@ h2 {
     text-align: left;
 }
 
-.nav-flex ul li a {
+.nav-flex ul:not(.social) li a {
     font: bold 16px "Arial";
     color: #fff;
     text-decoration: none;
@@ -117,8 +121,13 @@ h2 {
     transition: all 0.3s ease;
 }
 
-.jc-flex ul li a {
-    padding: 13px 29px;
+.wrapper .jc-flex ul li a,
+.wrapper .nav-flex .text {
+    padding: 13px 28px;
+}
+
+.wrapper .nav-flex .text-two {
+    padding: 13px 28px 13px 60px;
 }
 
 .nav .nav-flex ul li ul a {
@@ -154,7 +163,7 @@ h2 {
     border-right: solid 1px transparent;
 }
 
-.nav-flex ul li:nth-child(4):not(.menu-three) ul {
+.jc-flex ul li:nth-child(4) ul {
     right: 0;
 }
 
@@ -225,12 +234,14 @@ h2 {
 }
 
 .nav-flex .social {
-    margin-left: 226px;
-}
-
-.nav-flex .social {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
     width: 91px;
+}   
+
+.flex-grow:last-child {
+    justify-content: space-between;
     padding-right: 30px;
 }
 
@@ -244,19 +255,17 @@ h2 {
     border-left: unset;
 }
 
-.fb::before {
-    content: '';
-    position: absolute;
+.wrapper .fb {
+    display: inline-block;
     width: 8px;
     height: 18px;
     background: url(../img/sprite.png);
-    top: 15%;
-    left: 35%;
     transition: all 0.3s ease;
 }
 
-.fb:hover::before {
+.wrapper .nav-flex .fb:hover {
     background: 0 -18px url(../img/sprite.png);
+    border-radius: unset;
 }
 
 .nav-flex .social .tw,
@@ -266,34 +275,30 @@ h2 {
     border-left: unset;
 }
 
-.tw::before {
-    content: '';
-    position: absolute;
+.wrapper .tw {
+    display: inline-block;
     width: 16px;
     height: 14px;
-    background: -9px 0 url(../img/sprite.png);
-    top: 23%;
-    left: 25%;
+    background: -8px 0 url(../img/sprite.png);
     transition: all 0.3s ease;
 }
 
-.tw:hover::before {
+.wrapper .nav-flex .tw:hover {
     background: -8px -14px url(../img/sprite.png);
+    border-radius: unset;
 }
 
-.inst::before {
-    content: '';
-    position: absolute;
+.wrapper .inst {
+    display: inline-block;
     width: 14px;
     height: 16px;
     background: -25px 0 url(../img/sprite.png);
-    top: 19%;
-    left: 25%;
     transition: all 0.3s ease;
 }
 
-.inst:hover::before {
+.wrapper .nav-flex .inst:hover {
     background: -25px -16px url(../img/sprite.png);
+    border-radius: unset;
 }
 
 
@@ -385,7 +390,7 @@ tbody tr,
 }
 
 tbody tr:nth-child(2n),
-.table-css p:nth-child(2n) {
+.table-css p:nth-child(2n+1):not(:first-child) {
     background: #e8e8e8;
 }
 
