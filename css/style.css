@@ -142,6 +142,10 @@ h2 {
     border-bottom: 1px solid #b9bdc1;
 }
 
+.nav .nav-flex li ul li:last-child a {
+    border-bottom: unset;
+}
+
 .nav-flex ul li ul li:nth-child(1) a,
 .nav-flex .menu .menu-two li:nth-child(1) a {
     border-radius: 3px 3px 0 0;
