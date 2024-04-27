@@ -160,6 +160,14 @@ h2 {
     border-bottom: unset;
 }
 
+.nav .nav-flex li ul li:last-child ul li a {
+    border-bottom: 1px solid #b9bdc1;
+}
+
+.nav .nav-flex li ul li:last-child ul li:last-child a {
+    border-bottom: unset;
+}
+
 .nav-flex ul li ul li:nth-child(1) a,
 .nav-flex .menu .menu-two li:nth-child(1) a {
     border-radius: 3px 3px 0 0;
@@ -332,6 +340,27 @@ table thead td {
 thead tr:first-child td,
 .wrapper .tbody-css:first-child span {
     border-top: transparent;
+}
+
+.tbody-css:first-child span:first-child {
+    border-radius: 3px 0 0 0;
+}
+
+.tbody-css:first-child span:last-child {
+    border-radius: 0 3px 0 0;
+}
+
+.tbody-css:last-child span:first-child {
+    border-radius: 0 0 0 3px;
+}
+
+.tbody-css:last-child span:last-child {
+    border-radius: 0 0 3px 0;
+}
+
+.wrapper .css-table .table-css .tbody-css span {
+    border-top: transparent;
+    border-left: transparent;
 }
 
 thead td:first-child {
